@@ -102,6 +102,16 @@ lvim.builtin.alpha.dashboard.section.header.val = {
   [[                                            ]]
 }
 lvim.builtin.alpha.dashboard.section.footer.val = { "Zen's development environment" }
+lvim.builtin.alpha.dashboard.section.buttons.entries = {
+  { "SPC n", "  New File", "<CMD>ene!<CR>" },
+  { "SPC P", "  Recent Projects ", "<CMD>Telescope projects<CR>" },
+  { "SPC s r", "  Recently Used Files", "<CMD>Telescope oldfiles<CR>" },
+  {
+    "SPC L c",
+    "  Configuration",
+    "<CMD>edit " .. require("lvim.config"):get_user_config_path() .. " <CR>",
+  },
+}
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
